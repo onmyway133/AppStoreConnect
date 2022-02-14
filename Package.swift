@@ -12,13 +12,15 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/kean/Get", from: "0.3.1"), 
         .package(url: "https://github.com/kean/NaiveDate", from: "1.0.0"), 
-        .package(url: "https://github.com/kean/URLQueryEncoder", branch: "0.2.0")
+        .package(url: "https://github.com/kean/URLQueryEncoder", branch: "0.2.0"),
+        .package(url: "https://github.com/vapor/jwt-kit", from: "4.0.0")
     ],
     targets: [
         .target(name: "AppStoreConnect", dependencies: [
             .product(name: "Get", package: "Get"), 
             .product(name: "NaiveDate", package: "NaiveDate"), 
-            .product(name: "URLQueryEncoder", package: "URLQueryEncoder")
+            .product(name: "URLQueryEncoder", package: "URLQueryEncoder"),
+            .product(name: "JWTKit", package: "jwt-kit")
         ], path: "Sources")
     ]
 )

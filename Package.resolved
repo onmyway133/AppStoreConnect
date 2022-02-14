@@ -11,12 +11,30 @@
         }
       },
       {
+        "package": "jwt-kit",
+        "repositoryURL": "https://github.com/vapor/jwt-kit",
+        "state": {
+          "branch": null,
+          "revision": "1822bb0abf0a31a4b5078ec19061c548835253b5",
+          "version": "4.3.0"
+        }
+      },
+      {
         "package": "NaiveDate",
         "repositoryURL": "https://github.com/kean/NaiveDate",
         "state": {
           "branch": null,
           "revision": "08fad5d02e9117f6cea96096c5951e445aa710b1",
           "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-crypto",
+        "repositoryURL": "https://github.com/apple/swift-crypto.git",
+        "state": {
+          "branch": null,
+          "revision": "a8911e0fadc25aef1071d582355bd1037a176060",
+          "version": "2.0.4"
         }
       },
       {
