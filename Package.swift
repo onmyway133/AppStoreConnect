@@ -12,7 +12,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/kean/Get", from: "0.3.1"), 
         .package(url: "https://github.com/kean/NaiveDate", from: "1.0.0"), 
-        .package(url: "https://github.com/kean/URLQueryEncoder", branch: "0.2.0"),
+        .package(url: "https://github.com/kean/URLQueryEncoder", from: "0.2.0"),
         .package(url: "https://github.com/vapor/jwt-kit", from: "4.0.0")
     ],
     targets: [

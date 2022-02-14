@@ -41,9 +41,9 @@
         "package": "URLQueryEncoder",
         "repositoryURL": "https://github.com/kean/URLQueryEncoder",
         "state": {
-          "branch": "0.2.0",
+          "branch": null,
           "revision": "4cc975d4d075d0e62699a796a08284e217d4ee93",
-          "version": null
+          "version": "0.2.0"
         }
       }
     ]
