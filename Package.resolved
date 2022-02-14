@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Get",
+        "repositoryURL": "https://github.com/kean/Get",
+        "state": {
+          "branch": null,
+          "revision": "068b400e3850f0953ec25d11d3a3893c4538ffd5",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "NaiveDate",
+        "repositoryURL": "https://github.com/kean/NaiveDate",
+        "state": {
+          "branch": null,
+          "revision": "08fad5d02e9117f6cea96096c5951e445aa710b1",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "URLQueryEncoder",
+        "repositoryURL": "https://github.com/kean/URLQueryEncoder",
+        "state": {
+          "branch": "0.2.0",
+          "revision": "4cc975d4d075d0e62699a796a08284e217d4ee93",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
