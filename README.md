@@ -2,6 +2,8 @@
 
 Interact with [App Store Connect APIs](https://developer.apple.com/documentation/appstoreconnectapi/)
 
+## How to
+
 ```swift
 let client = Client(
     credential: Credential(
@@ -13,6 +15,15 @@ let client = Client(
 
 let response: AppPriceResponse = try await client.apiClient.send(Paths.AppPrices.get)
 ```
+
+### Create AppStore Connect key
+
+Go to https://appstoreconnect.apple.com/access/api
+
+- Create AppStore Connect key, grant according permission
+- Copy issuerId, f.e. 69abcdef-1234-5678-a123-123abcdeefgh
+- Copy keyId, f.e. AA1234ABCD
+- Wait a few seconds and refresh the page, you will be able to Download API Key. `privateKey` is the whole .p8 content
 
 ## Credit
 

@@ -5,26 +5,28 @@
 //  Created by khoa on 14/02/2022.
 //
 
+import Foundation
 import JWTKit
 
 public struct Credential {
     let issuerId: String
     let privateKeyId: String
     let privateKey: String
+    let expirationDuration: TimeInterval
 
     public init(
         issuerId: String,
         privateKeyId: String,
-        privateKey: String
+        privateKey: String,
+        expirationDuration: TimeInterval = 2 * 60
     ) {
         self.issuerId = issuerId
         self.privateKeyId = privateKeyId
         self.privateKey = privateKey
+        self.expirationDuration = expirationDuration
     }
 
     func generateJWT() throws -> String {
-        let audience = "appstoreconnect-v1"
-
         guard let signer = try? JWTSigner.es256(
             key: ECDSAKey.private(pem: privateKey))
         else {
@@ -32,15 +34,15 @@ public struct Credential {
         }
 
         let payload = Payload(
-            issueID: .init(value: issuerId),
-            expiration: .init(
-                value: .init(
-                    timeInterval: 2 * 60,
+            issueID: IssuerClaim(value: issuerId),
+            expiration: ExpirationClaim(
+                value: Date(
+                    timeInterval: expirationDuration,
                     since: Date()
                 )
             ),
-            audience: AudienceClaim.init(
-                value: audience
+            audience: AudienceClaim(
+                value: "appstoreconnect-v1"
             )
         )
 
